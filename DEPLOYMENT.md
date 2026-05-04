@@ -1,9 +1,9 @@
-# 🚀 GitHub Pages Setup - Schritt für Schritt
+﻿# 🚀 GitHub Pages Setup - Schritt für Schritt
 
 ## 1️⃣ GitHub Repository erstellen
 
 1. Gehe zu: https://github.com/new
-2. Repository Name: **`photocleaner-website`** (oder einen kreativen Namen!)
+2. Repository Name: **`BestShot-website`** (oder einen kreativen Namen!)
    - Vorschläge für "komische" Namen:
      - `photo-wizard-landing`
      - `snap-cleaner-web`
@@ -18,16 +18,16 @@
 Im Terminal (PowerShell) ausführen:
 
 ```powershell
-cd "C:\Users\chris\projects\photocleaner-website"
+cd "C:\Users\chris\projects\BestShot-website"
 
 # Dateien hinzufügen
 git add .
 
 # Commit erstellen
-git commit -m "Initial commit: PhotoCleaner Website"
+git commit -m "Initial commit: BestShot Website"
 
 # Remote hinzufügen (ERSETZE <username> durch deinen GitHub Username!)
-git remote add origin https://github.com/<username>/photocleaner-website.git
+git remote add origin https://github.com/<username>/BestShot-website.git
 
 # Hochladen
 git branch -M main
@@ -50,7 +50,7 @@ git push -u origin main
 Nach 1-2 Minuten ist deine Website live unter:
 
 ```
-https://<username>.github.io/photocleaner-website/
+https://<username>.github.io/BestShot-website/
 ```
 
 GitHub zeigt die URL oben im Pages-Bereich an!
@@ -62,7 +62,7 @@ GitHub zeigt die URL oben im Pages-Bereich an!
 Wenn du Änderungen an der Website machst:
 
 ```powershell
-cd "C:\Users\chris\projects\photocleaner-website"
+cd "C:\Users\chris\projects\BestShot-website"
 git add .
 git commit -m "Update: Beschreibung der Änderung"
 git push
@@ -74,7 +74,7 @@ GitHub Pages baut die Website automatisch neu (dauert ~1 Minute).
 
 ## 💡 Bonus: Eigene Domain (optional)
 
-Wenn du später eine eigene Domain willst (z.B. `photocleaner.de`):
+Wenn du später eine eigene Domain willst (z.B. `BestShot.de`):
 
 1. Kaufe Domain bei einem Anbieter (Namecheap, Cloudflare, etc.)
 2. Erstelle eine `CNAME`-Datei im Repository mit deiner Domain

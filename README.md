@@ -1,6 +1,6 @@
-# PhotoCleaner Website
+﻿# BestShot Website
 
-Offizielle Website für PhotoCleaner - Intelligente Foto-Verwaltung mit Duplikaterkennung.
+Offizielle Website für BestShot - Intelligente Foto-Verwaltung mit Duplikaterkennung.
 
 ## 🌐 Live Demo
 
@@ -45,8 +45,8 @@ python -m http.server 8000
 ## 📧 Kontakt-Formulare
 
 Die Website nutzt **FormSubmit.co** für Formulare:
-- Kontakt-Formular → `support@photocleaner.de`
-- Newsletter → `info@photocleaner.de`
+- Kontakt-Formular → `support@BestShot.de`
+- Newsletter → `info@BestShot.de`
 
 **Wichtig:** Beim ersten Absenden sendet FormSubmit eine Bestätigungs-Email an die konfigurierte Adresse!
 
@@ -59,4 +59,4 @@ Die Website nutzt **FormSubmit.co** für Formulare:
 
 ## 📝 Lizenz
 
-© 2026 PhotoCleaner. Alle Rechte vorbehalten.
+© 2026 BestShot. Alle Rechte vorbehalten.
