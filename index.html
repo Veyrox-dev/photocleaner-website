@@ -1179,6 +1179,76 @@
             width: 100%;
         }
 
+        /* Pricing toggle */
+        .pricing-toggle-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .pricing-toggle {
+            display: inline-flex;
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 4px;
+        }
+
+        .pricing-toggle button {
+            padding: 8px 22px;
+            border: none;
+            background: transparent;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .pricing-toggle button.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .pricing-toggle button:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .pricing-save-badge {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+            transition: opacity 0.2s;
+        }
+
+        .pricing-save-badge.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pricing-original-price {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-top: -6px;
+            margin-bottom: var(--spacing-lg);
+            min-height: 18px;
+            transition: opacity 0.2s;
+        }
+
+        .pricing-original-price.hidden {
+            opacity: 0;
+        }
+
         @media (max-width: 768px) {
             .pricing-card.featured {
                 border-width: 1.5px;
@@ -1814,6 +1884,16 @@
                 <h2>Einfache Preisgestaltung</h2>
                 <p>Eine kostenlose Version und ein Pro-Abonnement für erweiterte Funktionen</p>
             </div>
+
+            <!-- Billing interval toggle -->
+            <div class="pricing-toggle-wrap" role="group" aria-label="Abrechnungszeitraum wählen">
+                <div class="pricing-toggle">
+                    <button id="toggle-monthly" onclick="setPricingInterval('monthly')" aria-pressed="false">Monatlich</button>
+                    <button id="toggle-yearly" onclick="setPricingInterval('yearly')" class="active" aria-pressed="true">Jährlich</button>
+                </div>
+                <span class="pricing-save-badge" id="save-badge">30 % günstiger</span>
+            </div>
+
             <div class="pricing-grid">
                 <!-- Free Plan -->
                 <div class="pricing-card">
@@ -1835,8 +1915,9 @@
                 <div class="pricing-card featured">
                     <span class="pricing-badge">Empfohlen</span>
                     <h3 class="pricing-name">Pro</h3>
-                    <div class="pricing-price">€29</div>
-                    <p class="pricing-desc">Pro Jahr</p>
+                    <div class="pricing-price" id="pro-price">24,99 €</div>
+                    <p class="pricing-desc" id="pro-period">/ Jahr</p>
+                    <p class="pricing-original-price" id="pro-original">statt 35,88 € bei monatlicher Zahlung</p>
                     <ul class="pricing-features">
                         <li>Alles aus Kostenlos</li>
                         <li>Erweiterte KI-Analyse</li>
@@ -1845,7 +1926,7 @@
                         <li>Cloud-Backup (optional)</li>
                         <li>Prioritäts-Support via Email</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_6oUaEXf1pcgA0UYbo100002" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Pro aktivieren</a>
+                    <a href="https://buy.stripe.com/test_dRm7sL9H5bcw336cs500003" class="btn btn-primary btn-lg" id="pro-cta" target="_blank" rel="noopener">Jetzt Pro starten</a>
                 </div>
             </div>
 
@@ -2268,5 +2349,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Pricing interval toggle
+        function setPricingInterval(interval) {
+            var isYearly = interval === 'yearly';
+
+            var btnMonthly = document.getElementById('toggle-monthly');
+            var btnYearly  = document.getElementById('toggle-yearly');
+            btnMonthly.classList.toggle('active', !isYearly);
+            btnMonthly.setAttribute('aria-pressed', String(!isYearly));
+            btnYearly.classList.toggle('active', isYearly);
+            btnYearly.setAttribute('aria-pressed', String(isYearly));
+
+            document.getElementById('pro-price').textContent   = isYearly ? '24,99 €' : '2,99 €';
+            document.getElementById('pro-period').textContent  = isYearly ? '/ Jahr'   : '/ Monat';
+            document.getElementById('pro-original').classList.toggle('hidden', !isYearly);
+            document.getElementById('save-badge').classList.toggle('hidden', !isYearly);
+            document.getElementById('pro-cta').href = isYearly
+                ? 'https://buy.stripe.com/test_dRm7sL9H5bcw336cs500003'
+                : 'https://buy.stripe.com/test_bJe9ATf1p5Sc1Z2fEh00004';
+        }
+        // Default: yearly
+        setPricingInterval('yearly');
+    </script>
 </body>
 </html>
