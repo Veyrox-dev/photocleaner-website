@@ -1,62 +1,62 @@
-﻿# BestShot Website
+# Winnerpic Website
 
-Offizielle Website für BestShot - Intelligente Foto-Verwaltung mit Duplikaterkennung.
+Offizielle Website f�r Winnerpic - Intelligente Foto-Verwaltung mit Duplikaterkennung.
 
-## 🌐 Live Demo
+## ?? Live Demo
 
 Die Website ist live unter: [GitHub Pages URL wird nach Deployment angezeigt]
 
-## 📁 Struktur
+## ?? Struktur
 
 - `index.html` - Hauptseite (Homepage)
 - `download.html` - Download-Seite mit Countdown Timer
 - `docs.html` - Dokumentation
-- `faq.html` - Häufig gestellte Fragen
+- `faq.html` - H�ufig gestellte Fragen
 - `changelog.html` - Versionshistorie
 - `impressum.html` - Impressum
-- `datenschutz.html` - Datenschutzerklärung
+- `datenschutz.html` - Datenschutzerkl�rung
 - `feedback_form.html` - Feedback-Formular
 - `assets/` - Bilder, Icons und andere Assets
 
-## 🚀 Deployment
+## ?? Deployment
 
-Diese Website wird automatisch über **GitHub Pages** gehostet.
+Diese Website wird automatisch �ber **GitHub Pages** gehostet.
 
 ### Setup:
 
 1. Repository auf GitHub hochladen
-2. In Repository Settings → Pages:
+2. In Repository Settings ? Pages:
    - Source: `Deploy from a branch`
    - Branch: `main` (oder `master`)
    - Folder: `/ (root)`
-3. Speichern → GitHub baut die Seite automatisch
+3. Speichern ? GitHub baut die Seite automatisch
 
 ### Lokale Vorschau:
 
-Öffne einfach `index.html` im Browser oder nutze einen lokalen Webserver:
+�ffne einfach `index.html` im Browser oder nutze einen lokalen Webserver:
 
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Dann öffne: http://localhost:8000
+# Dann �ffne: http://localhost:8000
 ```
 
-## 📧 Kontakt-Formulare
+## ?? Kontakt-Formulare
 
-Die Website nutzt **FormSubmit.co** für Formulare:
-- Kontakt-Formular → `support@BestShot.de`
-- Newsletter → `info@BestShot.de`
+Die Website nutzt **FormSubmit.co** f�r Formulare:
+- Kontakt-Formular ? `support@Winnerpic.de`
+- Newsletter ? `info@Winnerpic.de`
 
-**Wichtig:** Beim ersten Absenden sendet FormSubmit eine Bestätigungs-Email an die konfigurierte Adresse!
+**Wichtig:** Beim ersten Absenden sendet FormSubmit eine Best�tigungs-Email an die konfigurierte Adresse!
 
-## 🛠️ Technologie
+## ??? Technologie
 
 - Reines HTML5, CSS3, Vanilla JavaScript
 - Keine Build-Tools oder Dependencies
 - Responsive Design (Mobile, Tablet, Desktop)
-- Optimiert für SEO und Performance
+- Optimiert f�r SEO und Performance
 
-## 📝 Lizenz
+## ?? Lizenz
 
-© 2026 BestShot. Alle Rechte vorbehalten.
+� 2026 Winnerpic. Alle Rechte vorbehalten.

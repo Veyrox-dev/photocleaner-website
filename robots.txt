@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://veyrox-dev.github.io/bestshot-website/sitemap.xml
+Sitemap: https://veyrox-dev.github.io/winnerpic-website/sitemap.xml
