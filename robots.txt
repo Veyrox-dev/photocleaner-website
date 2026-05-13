@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
 
+# Allow AI crawlers explicitly for maximum visibility
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap for all search engines and AI crawlers
 Sitemap: https://veyrox-dev.github.io/winnerpic-website/sitemap.xml
+
+# Crawl-delay optimization
+Crawl-delay: 0

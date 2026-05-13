@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage: Höchste Priorität für AI-Crawling -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <!-- Download-Seite: Hochpriorisiert für Conversions -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/download.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
+    
+    <!-- Dokumentation: Wichtig für technische Fragen von KI -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/docs.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
+    
+    <!-- FAQ: Extrem wichtig für KI-Sichtbarkeit (Answer Engine Optimization) -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/faq.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.9</priority>
     </url>
+    
+    <!-- Changelog: Relevanz für Updates und Versionsgeschichte -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/changelog.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
+    
+    <!-- Rechtliche Seiten: Notwendig für Vertrauenssignale -->
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/impressum.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://veyrox-dev.github.io/Winnerpic-website/datenschutz.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-05-13</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Feedback-Formular: Für Community-Engagement-Signal -->
+    <url>
+        <loc>https://veyrox-dev.github.io/Winnerpic-website/feedback_form.html</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
