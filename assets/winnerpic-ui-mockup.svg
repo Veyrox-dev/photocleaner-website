@@ -3,7 +3,7 @@
     <rect width="700" height="36" rx="8" fill="#0f172a"/>
     <rect y="28" width="700" height="8" fill="#0f172a"/>
     <rect x="10" y="10" width="16" height="16" rx="3" fill="transparent" stroke="#334155" stroke-width="1"/>
-    <image href="icon.png" x="10" y="10" width="16" height="16" preserveAspectRatio="xMidYMid slice"/>
+    <image href="logo-winnerpic.svg" x="10" y="10" width="16" height="16" preserveAspectRatio="xMidYMid meet"/>
     <text x="34" y="23" fill="#94a3b8" font-family="Segoe UI,sans-serif" font-size="12" font-weight="600">Winnerpic v0.8.7</text>
     <rect x="592" y="0" width="36" height="36" fill="transparent"/>
     <text x="610" y="22" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI,sans-serif" font-size="14">&#x2212;</text>
