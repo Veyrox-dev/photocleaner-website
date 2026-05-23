@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Winnerpic: Automatische Duplikat-Erkennung für Windows. 100% lokal, keine Cloud, kostenlos. Intelligente Photoanalyse.">
+    <meta name="description" content="Winnerpic: Intelligente Foto-Verwaltung für Windows mit automatischer Duplikat-Erkennung. 100% lokal, keine Cloud, kostenlos und DSGVO-konform.">
     <meta name="keywords" content="Foto Duplikate finden, Bildverwaltung Windows, Fotobibliothek aufräumen, Duplikat Erkennung, Foto Qualität analysieren">
     <meta name="robots" content="index, follow">
     <meta name="audience" content="photographers, private users">
@@ -32,6 +32,7 @@
     
     <!-- Base URL for GitHub Pages -->
     <base href="https://veyrox-dev.github.io/winnerpic-website/">
+    <link rel="canonical" href="https://veyrox-dev.github.io/winnerpic-website/">
     
     <title>Winnerpic - Intelligente Foto-Verwaltung für Windows</title>
 
@@ -663,9 +664,11 @@
             height: 56px;
         }
 
-        .feature-card h3 {
+        .feature-card .feature-title {
             margin-bottom: var(--spacing-sm);
             font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
         .feature-card p {
@@ -683,9 +686,11 @@
             border: 1.5px solid var(--border);
         }
 
-        .security-card h3 {
+        .security-card .security-title {
             margin-bottom: var(--spacing-sm);
             font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
         .security-card p {
@@ -844,10 +849,11 @@
             line-height: 1;
         }
 
-        .use-case-card h3 {
+        .use-case-card .use-case-title {
             color: var(--text-dark);
             margin-bottom: var(--spacing-sm);
             font-size: 18px;
+            font-weight: 700;
         }
 
         .use-case-card p {
@@ -1467,11 +1473,24 @@
             margin-bottom: var(--spacing-2xl);
         }
 
-        .footer-section h4 {
+        .footer-section .footer-title {
             font-size: 16px;
             font-weight: 700;
             color: white;
             margin-bottom: var(--spacing-lg);
+        }
+
+        .share-box {
+            background: var(--bg-light);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+        }
+
+        .share-box p {
+            margin-bottom: var(--spacing-md);
         }
 
         .footer-section ul {
@@ -1644,9 +1663,6 @@
     </style>
 
 
-    <!-- Google Analytics 4 - AI Traffic Tracking (TODO: Ersetze G-XXXXXXX mit deiner GA4 Measurement ID) -->
-    <!-- Regex Pattern f�r AI-Bot Detection: ^.*gemini.*google.*|.*bard.*|.*perplexity.*|.*gpt.*|.*chatgpt.*|.*copilot.*|.*\.openai.* -->
-    <!-- Schema: Set up Custom Segment in GA4 mit diesem Regex-Pattern f�r AI-Traffic Monitoring -->
 </head>
 <body>
     <!-- HEADER & NAVIGATION -->
@@ -1664,12 +1680,12 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#pricing">Preise</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="faq.html">FAQ Hilfe</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="#pricing" class="btn btn-secondary">Mehr erfahren</a>
-                <a href="download.html" class="btn btn-primary btn-lg">Download</a>
+                <a href="download.html" class="btn btn-primary btn-lg">App herunterladen</a>
             </div>
         </nav>
     </header>
@@ -1679,10 +1695,10 @@
         <div class="container">
             <div class="hero-content">
                 <span class="badge">Für Windows - Made in Germany</span>
-                <h1>Intelligente Duplikat-Erkennung für deine Fotobibliothek</h1>
-                <p>Finde und verwalte automatisch Duplikate in großen Fotosammlungen. Alles bleibt auf deinem PC, keine Cloud, maximale Datensicherheit.</p>
+                <h1>Winnerpic: Intelligente Foto-Verwaltung mit Duplikat-Erkennung für Windows</h1>
+                <p>Winnerpic erkennt ähnliche und identische Bilder in großen Sammlungen, priorisiert die beste Aufnahme pro Gruppe und hilft dir, deine Foto-Verwaltung strukturiert und nachvollziehbar zu erledigen.</p>
                 <div class="hero-buttons">
-                    <a href="download.html" class="btn btn-primary btn-lg">Kostenlos herunterladen</a>
+                    <a href="download.html" class="btn btn-primary btn-lg">Jetzt kostenlos für Windows herunterladen</a>
                     <a href="#features" class="btn btn-lg" style="background: rgba(255, 255, 255, 0.2); border: 1.5px solid white; color: white; font-weight: 600;">Features ansehen</a>
                 </div>
             </div>
@@ -1816,7 +1832,7 @@
         <div class="container problem-content">
             <div class="section-header">
                 <h2>Das Problem</h2>
-                <p>Große Fotosammlungen werden schnell unübersichtlich</p>
+                <p>Große Fotosammlungen werden unübersichtlich, wenn Serienbilder, Messenger-Exporte und Kamera-Backups zusammenkommen und dadurch täglich neue Dubletten entstehen.</p>
             </div>
             <ul class="problem-list">
                 <li>Hunderte ähnlicher Fotos manuell durchsuchen und vergleichen</li>
@@ -1832,37 +1848,37 @@
         <div class="container">
             <div class="section-header">
                 <h2>Kernfunktionen</h2>
-                <p>Entwickelt für alle, die ihre Fotobibliothek smart organisieren wollen</p>
+                <p>Die Funktionen sind darauf ausgelegt, Foto-Bestände schneller zu bereinigen, Risiken beim Löschen zu reduzieren und gleichzeitig die Kontrolle vollständig bei dir zu lassen.</p>
             </div>
             <div class="grid grid-3">
                 <div class="feature-card">
                     <span class="feature-icon">DUP</span>
-                    <h3>Intelligente Duplikat-Erkennung</h3>
+                    <p class="feature-title">Intelligente Duplikat-Erkennung</p>
                     <p>Findet optisch ähnliche Bilder mit smarter Bilderkennung - nicht nur exakt identische Dateien.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">EYE</span>
-                    <h3>Geschlossene Augen erkennen</h3>
+                    <p class="feature-title">Geschlossene Augen erkennen</p>
                     <p>Automatische Analyse erkennt Fotos mit geschlossenen Augen und nutzt diese Informationen für die Qualitätsbewertung.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">QA</span>
-                    <h3>Qualitätsbewertung</h3>
+                    <p class="feature-title">Qualitätsbewertung</p>
                     <p>Analysiert Schärfe, Belichtung, Komposition und andere Faktoren für objektive Foto-Qualitätsbeurteilung.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">DIR</span>
-                    <h3>Analyse ganzer Ordnerstrukturen</h3>
+                    <p class="feature-title">Analyse ganzer Ordnerstrukturen</p>
                     <p>Verarbeitet komplette Verzeichnisse und Unterordner in einem Durchgang - keine umständliche einzelne Dateiauswahl.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">CTL</span>
-                    <h3>Strukturierte Vorauswahl</h3>
+                    <p class="feature-title">Strukturierte Vorauswahl</p>
                     <p>Du kontrollierst jede Entscheidung. Kein automatisches Löschen - nur intelligente Vorschläge zur Überprüfung.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">LOC</span>
-                    <h3>100 % lokale Verarbeitung</h3>
+                    <p class="feature-title">100 % lokale Verarbeitung</p>
                     <p>Alles läuft auf deinem PC. Keine Cloud, keine Uploads, keine externen Server. Maximaler Datenschutz.</p>
                 </div>
             </div>
@@ -1907,37 +1923,37 @@
         <div class="container">
             <div class="section-header">
                 <h2>Sicherheit und Datenschutz</h2>
-                <p>Transparente, sachliche Fakten zu deinen Daten</p>
+                <p>Alle sicherheitsrelevanten Abläufe sind transparent dokumentiert, damit du nachvollziehen kannst, welche Daten lokal bleiben und wann überhaupt eine Internetverbindung genutzt wird.</p>
             </div>
             <div class="grid grid-3">
                 <div class="security-card">
                     <span class="security-icon">LOC</span>
-                    <h3>Lokale Verarbeitung</h3>
+                    <p class="security-title">Lokale Verarbeitung</p>
                     <p>Alle Fotos werden lokal auf deinem Computer verarbeitet. Es gibt keinen Upload auf externe Server.</p>
                 </div>
                 <div class="security-card">
                     <span class="security-icon">OFF</span>
-                    <h3>Keine Cloud</h3>
+                    <p class="security-title">Keine Cloud</p>
                     <p>Deine Daten verlassen deinen Computer nicht. Keine Abhängigkeit von Cloud-Services.</p>
                 </div>
                 <div class="security-card">
                     <span class="security-icon">BIN</span>
-                    <h3>Papierkorb-Integration</h3>
+                    <p class="security-title">Papierkorb-Integration</p>
                     <p>Gelöschte Dateien gehen in den Windows-Papierkorb. Du kannst sie jederzeit wiederherstellen.</p>
                 </div>
                 <div class="security-card">
                     <span class="security-icon">NO</span>
-                    <h3>Keine Datensammlung</h3>
+                    <p class="security-title">Keine Datensammlung</p>
                     <p>Keine Telemetrie, keine Tracker, keine Datensammelei. Keine Überwachung.</p>
                 </div>
                 <div class="security-card">
                     <span class="security-icon">AIR</span>
-                    <h3>Offline-Betrieb</h3>
+                    <p class="security-title">Offline-Betrieb</p>
                     <p>Funktioniert offline. Lizenzprüfung nur 1x pro Woche nötig. Volle Kontrolle über deine Daten.</p>
                 </div>
                 <div class="security-card">
                     <span class="security-icon">LOG</span>
-                    <h3>Volle Transparenz</h3>
+                    <p class="security-title">Volle Transparenz</p>
                     <p>Du siehst exakt, was gelöscht wird. Jede Aktion ist nachvollziehbar und rückgängig machbar.</p>
                 </div>
             </div>
@@ -2146,38 +2162,48 @@
         <div class="container">
             <div class="section-header">
                 <h2>Typische Anwendungsfälle</h2>
-                <p>So hilft Winnerpic verschiedenen Nutzergruppen</p>
+                <p>So unterstützt Winnerpic unterschiedliche Arbeitsweisen vom Familienarchiv bis zum professionellen Shooting-Workflow mit tausenden Bildern pro Monat.</p>
             </div>
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <span class="use-case-icon">HOB</span>
-                    <h3>Hobbyfotografen</h3>
+                    <p class="use-case-title">Hobbyfotografen</p>
                     <p>Verwalte deine Fotosammlung professionell. Entdecke ähnliche Aufnahmen vom gleichen Motiv und behalte nur die Besten.</p>
                 </div>
                 <div class="use-case-card">
                     <span class="use-case-icon">FAM</span>
-                    <h3>Familie & Private Nutzer</h3>
+                    <p class="use-case-title">Familie & Private Nutzer</p>
                     <p>Archiviere Familienerinnerungen sauber. Entferne unscharfe Aufnahmen automatisch und spare Speicherplatz.</p>
                 </div>
                 <div class="use-case-card">
                     <span class="use-case-icon">CRE</span>
-                    <h3>Content Creator</h3>
+                    <p class="use-case-title">Content Creator</p>
                     <p>Organisiere große Foto-Libraries für Projekte. Finde Duplikate schnell und fahre mit der Bearbeitung fort.</p>
                 </div>
                 <div class="use-case-card">
                     <span class="use-case-icon">PRO</span>
-                    <h3>Professionelle Fotografen</h3>
+                    <p class="use-case-title">Professionelle Fotografen</p>
                     <p>Verwalte Tausende von Schussfolgen. Bewahre die besten Bilder auf und archiviere alternative Aufnahmen automatisiert.</p>
                 </div>
                 <div class="use-case-card">
                     <span class="use-case-icon">SSD</span>
-                    <h3>Speicherplatz sparen</h3>
+                    <p class="use-case-title">Speicherplatz sparen</p>
                     <p>Entferne Duplikate und unscharfe Fotos. Gib Speicherplatz auf deiner Festplatte frei und beschleunige dein System.</p>
                 </div>
                 <div class="use-case-card">
                     <span class="use-case-icon">PRV</span>
-                    <h3>Datenschutz-bewusste Nutzer</h3>
+                    <p class="use-case-title">Datenschutz-bewusste Nutzer</p>
                     <p>Verwende ein Tool, das deine Daten nicht in die Cloud hochlädt. Alles läuft lokal. Lizenz wird 1x pro Woche online geprüft.</p>
+                </div>
+            </div>
+
+            <div class="share-box">
+                <p>Wenn dir Winnerpic hilft, teile die Seite mit Freunden, Kollegen oder deiner Community.</p>
+                <div class="social-links" aria-label="Social Sharing">
+                    <a class="social-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fveyrox-dev.github.io%2Fwinnerpic-website%2F" target="_blank" rel="noopener noreferrer" aria-label="Auf LinkedIn teilen">in</a>
+                    <a class="social-link" href="https://twitter.com/intent/tweet?text=Winnerpic%20-%20Intelligente%20Foto-Verwaltung%20fuer%20Windows&url=https%3A%2F%2Fveyrox-dev.github.io%2Fwinnerpic-website%2F" target="_blank" rel="noopener noreferrer" aria-label="Auf X teilen">X</a>
+                    <a class="social-link" href="https://wa.me/?text=Winnerpic%20-%20Intelligente%20Foto-Verwaltung%20fuer%20Windows%20https%3A%2F%2Fveyrox-dev.github.io%2Fwinnerpic-website%2F" target="_blank" rel="noopener noreferrer" aria-label="Auf WhatsApp teilen">WA</a>
+                    <a class="social-link" href="mailto:?subject=Winnerpic%20fuer%20Windows&body=Ich%20habe%20ein%20Tool%20gefunden%2C%20das%20Fotosammlungen%20mit%20lokaler%20Duplikat-Erkennung%20ordnet%3A%20https%3A%2F%2Fveyrox-dev.github.io%2Fwinnerpic-website%2F" aria-label="Per E-Mail teilen">@</a>
                 </div>
             </div>
         </div>
@@ -2187,24 +2213,24 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>Produkt</h4>
+                    <p class="footer-title">Produkt</p>
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Preise</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="#features">Features im Überblick</a></li>
+                        <li><a href="#pricing">Preisübersicht</a></li>
+                        <li><a href="download.html">Windows Download</a></li>
+                        <li><a href="changelog.html">Versionshistorie</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
+                    <p class="footer-title">Support</p>
                     <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
+                        <li><a href="faq.html">Fragen und Antworten</a></li>
+                        <li><a href="#contact">Kontaktformular</a></li>
                         <li><a href="mailto:support@Winnerpic.de">support@Winnerpic.de</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Rechtliches</h4>
+                    <p class="footer-title">Rechtliches</p>
                     <ul>
                         <li><a href="impressum.html">Impressum</a></li>
                         <li><a href="datenschutz.html">Datenschutz</a></li>
