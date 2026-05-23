@@ -664,6 +664,13 @@
             height: 56px;
         }
 
+        .feature-icon,
+        .security-icon,
+        .use-case-icon,
+        .trust-badge-icon {
+            display: none;
+        }
+
         .feature-card .feature-title {
             margin-bottom: var(--spacing-sm);
             font-size: 18px;
@@ -1981,12 +1988,12 @@
                 <!-- Free Plan -->
                 <div class="pricing-card">
                     <h3 class="pricing-name">Kostenlos</h3>
-                    <div class="pricing-price">EUR 0</div>
-                    <p class="pricing-desc">Unbegrenzte Nutzung</p>
+                    <div class="pricing-price">0 €</div>
+                    <p class="pricing-desc">Bis zu 250 Bilder insgesamt</p>
                     <ul class="pricing-features">
                         <li>Duplikat-Erkennung</li>
                         <li>Qualitätsbewertung</li>
-                        <li>Ordner-Analyse</li>
+                        <li>Ordner-Analyse (insgesamt bis 250 Bilder)</li>
                         <li>Papierkorb-Integration</li>
                         <li class="disabled">Cloud-Backup</li>
                         <li class="disabled">Prioritäts-Support</li>
@@ -1998,9 +2005,9 @@
                 <div class="pricing-card featured">
                     <span class="pricing-badge">Empfohlen</span>
                     <h3 class="pricing-name">Pro</h3>
-                    <div class="pricing-price" id="pro-price">24,99 EUR</div>
+                    <div class="pricing-price" id="pro-price">24,99 €</div>
                     <p class="pricing-desc" id="pro-period">/ Jahr</p>
-                    <p class="pricing-original-price" id="pro-original">statt 35,88 EUR bei monatlicher Zahlung</p>
+                    <p class="pricing-original-price" id="pro-original">statt 35,88 € bei monatlicher Zahlung</p>
                     <ul class="pricing-features">
                         <li>Alles aus Kostenlos</li>
                         <li>Erweiterte KI-Analyse</li>
@@ -2455,7 +2462,7 @@
             btnYearly.classList.toggle('active', isYearly);
             btnYearly.setAttribute('aria-pressed', String(isYearly));
 
-            document.getElementById('pro-price').textContent   = isYearly ? '24,99 ?' : '2,99 ?';
+            document.getElementById('pro-price').textContent   = isYearly ? '24,99 €' : '2,99 €';
             document.getElementById('pro-period').textContent  = isYearly ? '/ Jahr'   : '/ Monat';
             document.getElementById('pro-original').classList.toggle('hidden', !isYearly);
             document.getElementById('save-badge').classList.toggle('hidden', !isYearly);
