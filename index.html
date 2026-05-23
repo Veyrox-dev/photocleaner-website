@@ -101,6 +101,8 @@
             --primary-light: #3b82f6;
             --accent: #0891b2;
             --success: #059669;
+            --success-light: #10b981;
+            --success-soft: #dcfce7;
             --warning: #d97706;
             --error: #dc2626;
             
@@ -467,13 +469,37 @@
            HERO SECTION
            ============================================ */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(140deg, #5b9cff 0%, #3a7be8 45%, #2150b3 100%);
             color: white;
             padding-top: 64px;
             padding-bottom: var(--spacing-3xl);
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: -120px auto auto -140px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 252, 231, 0.35) 0%, rgba(220, 252, 231, 0) 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -140px -120px auto;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(186, 230, 253, 0.28) 0%, rgba(186, 230, 253, 0) 72%);
+            z-index: 1;
+            pointer-events: none;
         }
 
         .hero .container {
@@ -512,27 +538,43 @@
 
         .badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(220, 252, 231, 0.22);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
             margin-bottom: var(--spacing-2xl);
             margin-top: var(--spacing-xl);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(220, 252, 231, 0.55);
+            color: #f0fdf4;
         }
 
         .hero h1 {
             margin-bottom: var(--spacing-lg);
+            color: #f8fbff;
+            text-shadow: 0 8px 24px rgba(14, 34, 84, 0.28);
         }
 
         .hero-content > p {
-            color: white !important;
+            color: #eef5ff !important;
             font-size: 22px;
             margin-bottom: var(--spacing-2xl);
             font-weight: 600;
             line-height: 1.7;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(14, 34, 84, 0.22);
+        }
+
+        .btn-hero-secondary {
+            background: rgba(240, 253, 244, 0.15);
+            border: 1.5px solid rgba(220, 252, 231, 0.8);
+            color: #f0fdf4;
+            font-weight: 600;
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(220, 252, 231, 0.28);
+            color: #ffffff;
+            border-color: rgba(220, 252, 231, 1);
         }
 
         .hero-buttons {
@@ -1706,7 +1748,7 @@
                 <p>Winnerpic erkennt ähnliche und identische Bilder in großen Sammlungen, priorisiert die beste Aufnahme pro Gruppe und hilft dir, deine Foto-Verwaltung strukturiert und nachvollziehbar zu erledigen.</p>
                 <div class="hero-buttons">
                     <a href="download.html" class="btn btn-primary btn-lg">Jetzt kostenlos für Windows herunterladen</a>
-                    <a href="#features" class="btn btn-lg" style="background: rgba(255, 255, 255, 0.2); border: 1.5px solid white; color: white; font-weight: 600;">Features ansehen</a>
+                    <a href="#features" class="btn btn-lg btn-hero-secondary">Features ansehen</a>
                 </div>
             </div>
             <!-- App Screenshot Mockup -->
